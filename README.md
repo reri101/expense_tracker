@@ -1,140 +1,73 @@
-# Expenses Tracker
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-Expenses Tracker to aplikacja umożliwiająca zarządzanie wydatkami. Aplikacja składa się z frontendowej i backendowej części. Frontend napisany jest w React z TypeScript, a backend w NestJS z TypeScript. Projekt korzysta z bazy danych PostgreSQL do przechowywania danych o wydatkach.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## Spis Treści
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-1. [Opis Projektu](#opis-projektu)
-2. [Backend](#backend)
-3. [Frontend](#frontend)
-4. [Uruchamianie Projektu](#uruchamianie-projektu)
-5. [Zrzuty Ekranu](#zrzuty-ekranu)
-6. [Technologie](#technologie)
-7. [Biblioteki](#biblioteki)
-8. [Autorzy](#autorzy)
+## Description
 
-## Opis Projektu
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-Aplikacja umożliwia dodawanie, wyświetlanie i sortowanie wydatków. Frontend komunikuje się z backendem poprzez REST API. Backend zarządza danymi, przechowując je w bazie danych PostgreSQL.
+## Installation
 
-## Backend
+```bash
+$ npm install
+```
 
-### Instalacja
+## Running the app
 
-1.  **Sklonuj repozytorium:**
+```bash
+# development
+$ npm run start
 
-    ```bash
+# watch mode
+$ npm run start:dev
 
-    git clone https://github.com/yourusername/expense-tracker.git
+# production mode
+$ npm run start:prod
+```
 
-    ```
+## Test
 
-2.  **Przejdź do katalogu backendu:**
+```bash
+# unit tests
+$ npm run test
 
-    ```bash
+# e2e tests
+$ npm run test:e2e
 
-    cd backend
+# test coverage
+$ npm run test:cov
+```
 
-    ```
+## Support
 
-3.  **Zainstaluj zależności:**
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-    Upewnij się, że masz zainstalowane Node.js i npm. Następnie zainstaluj zależności:
+## Stay in touch
 
-    ```bash
-    npm install
-    ```
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-4.  **Konfiguracja Bazy Danych**
+## License
 
-    Upewnij się, że masz zainstalowany PostgreSQL. Utwórz bazę danych o nazwie `expenses_db` oraz użytkownika z odpowiednimi uprawnieniami.
-
-5.  **Uruchamianie Backend**
-
-    Aby uruchomić aplikację backendową, użyj:
-
-    ```bash
-    npm run start
-
-    ```
-
-    Aplikacja będzie działać na porcie `3001`.
-
-### Frontend
-
-1. **Przejdź do katalogu frontendu:**
-
-   ```bash
-
-   cd frontend
-
-   ```
-
-2. **Instalacja Zależności**
-
-   Upewnij się, że masz zainstalowane Node.js i npm. Następnie zainstaluj zależności:
-
-   ```bash
-   npm install
-   ```
-
-3. **Uruchamianie Frontend**
-
-   Aby uruchomić aplikację frontendową, użyj:
-
-   ```bash
-   npm start
-   ```
-
-   Aplikacja będzie dostępna pod adresem `http://localhost:3000`.
-
-### Endpointy API
-
-- **GET /expenses** - Pobierz listę wydatków z opcjonalnym sortowaniem i limitowaniem.
-- **GET /expenses/:id** - Pobierz szczegóły wydatku po ID.
-- **POST /expenses** - Dodaj nowy wydatek.
-
-## Uruchamianie Projektu
-
-1. Uruchom backend zgodnie z powyższymi instrukcjami.
-2. Uruchom frontend zgodnie z powyższymi instrukcjami.
-
-## Zrzuty Ekranu
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
-![alt text](image.png)
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
-
-![alt text](image-6.png)
-
-![alt text](image-5.png)
-
-## Technologie
-
-- **React**: Biblioteka do budowania interfejsów użytkownika.
-- **Tailwind CSS**: Framework CSS do szybkiego stylizowania aplikacji.
-- **Axios**: Klient HTTP do komunikacji z API.
-- **TypeScript**: Statycznie typowany język JavaScript do poprawy jakości kodu.
-- **NestJS**: Framework do budowy aplikacji backendowych w Node.js.
-- **TypeORM**: ORM (Object-Relational Mapper) do integracji z bazą danych PostgreSQL.
-- **PostgreSQL**: Relacyjna baza danych używana do przechowywania danych aplikacji.
-- **Node.js**: Środowisko uruchomieniowe do obsługi backendu.
-
-## Biblioteki
-
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Backend**: NestJS, TypeORM, PostgreSQL
-
-## Autorzy
-
-- Mikołaj Zwoliński
-
-## Licencja
-
-Ten projekt jest licencjonowany na warunkach licencji MIT.
+Nest is [MIT licensed](LICENSE).
