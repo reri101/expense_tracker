@@ -25,7 +25,7 @@ Aplikacja umożliwia dodawanie, wyświetlanie i sortowanie wydatków. Frontend k
 
     ```bash
 
-    git clone https://github.com/yourusername/expense-tracker.git
+    git clone https://github.com/reri101/expense_tracker.git
 
     ```
 
