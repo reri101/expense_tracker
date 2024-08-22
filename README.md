@@ -43,7 +43,6 @@ Aplikacja umożliwia dodawanie, wyświetlanie i sortowanie wydatków. Frontend k
 
     ```bash
     npm install
-    npm install @nestjs/common @nestjs/core @nestjs/typeorm typeorm class-transformer class-validator
     ```
 
 4.  **Konfiguracja Bazy Danych**
@@ -77,7 +76,6 @@ Aplikacja umożliwia dodawanie, wyświetlanie i sortowanie wydatków. Frontend k
 
    ```bash
    npm install
-   npm install typescript --save-dev
    ```
 
 3. **Uruchamianie Frontend**
